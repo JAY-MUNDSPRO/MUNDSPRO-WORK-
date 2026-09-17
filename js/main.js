@@ -14,11 +14,3 @@ navPanel.querySelectorAll('a').forEach(link => {
     navToggle.setAttribute('aria-expanded', false);
   });
 });
-
-const form = document.getElementById('contactForm');
-const formNote = document.getElementById('formNote');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  formNote.textContent = 'Thanks — this form is not yet connected to email. Call or email us directly for now.';
-});

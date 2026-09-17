@@ -27,7 +27,9 @@
     "addressRegion": "FL",
     "addressCountry": "US"
   },
-  "telephone": "",
+  "telephone": "+1-561-303-9475",
+  "email": "mundspro@gmail.com",
+  "url": "https://mundspro.com",
   "priceRange": "$$"
 }
 </script>
@@ -49,7 +51,7 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <a href="tel:+15550000000" class="header-phone">(555) 000-0000</a>
+        <a href="tel:+15613039475" class="header-phone">(561) 303-9475</a>
         <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
       </div>
     </div>
@@ -190,12 +192,16 @@
         <h2 class="section-title">Let's talk about your project</h2>
         <p class="section-sub">Serving Boca Raton, Delray Beach, Boynton Beach, Deerfield Beach, and the surrounding South Florida area.</p>
         <ul class="contact-details">
-          <li><strong>Phone</strong><span><a href="tel:+15550000000">(555) 000-0000</a></span></li>
-          <li><strong>Email</strong><span><a href="mailto:info@mundspro.com">info@mundspro.com</a></span></li>
+          <li><strong>Phone</strong><span><a href="tel:+15613039475">(561) 303-9475</a></span></li>
+          <li><strong>Email</strong><span><a href="mailto:mundspro@gmail.com">mundspro@gmail.com</a></span></li>
           <li><strong>Service Area</strong><span>Boca Raton &amp; South Florida</span></li>
         </ul>
       </div>
-      <form class="contact-form" id="contactForm">
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/mundspro@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New lead from mundspro.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://mundspro.com/thank-you.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-row">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
@@ -225,7 +231,7 @@
           <textarea id="message" name="message" rows="4"></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-lg form-submit">Send Message</button>
-        <p class="form-note" id="formNote"></p>
+        <p class="form-note">We'll get back to you within 1 business day.</p>
       </form>
     </div>
   </section>
