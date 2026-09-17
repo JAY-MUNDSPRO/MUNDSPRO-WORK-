@@ -5,32 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thank You | MUNDSPRO</title>
 <meta name="robots" content="noindex">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0e1116">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="site-header">
+
+<header class="site-header" id="siteHeader">
   <div class="container header-inner">
-    <a href="/" class="logo">MUND<span>SPRO</span></a>
+    <a href="index.html" class="logo" aria-label="MUNDSPRO home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><g stroke="#b8955a" stroke-width="3.2" stroke-linecap="square"><path d="M5 34 L19 6"/><path d="M14 34 L28 6"/><path d="M23 34 L37 6"/></g></svg>
+      <span>MUNDSPRO<span class="dot">.</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="siteNav">
+      <a href="index.html#services">Services</a>
+      <a href="custom-wall-features.html">Accent Walls</a>
+      <a href="index.html#portfolio">Projects</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="tel:+15613039475" class="nav-phone">(561) 303-9475</a>
+    </nav>
   </div>
 </header>
+
 <main>
-  <section class="hero">
+  <section class="hero" style="min-height: 100svh;">
     <div class="container hero-inner">
-      <p class="eyebrow">Message Sent</p>
-      <h1>Thanks — we've got your message.</h1>
-      <p class="hero-sub">Someone from MUNDSPRO will reach out within 1 business day. If it's urgent, call us directly at <a href="tel:+15613039475">(561) 303-9475</a>.</p>
-      <div class="hero-actions">
-        <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
+      <div class="rule reveal"></div>
+      <p class="eyebrow reveal reveal-d1" style="color: var(--gold-2)">Message Sent</p>
+      <h1 class="reveal reveal-d1">Thanks &mdash; <em class="accent">we&rsquo;ve got it.</em></h1>
+      <p class="lede reveal reveal-d2">Someone from MUNDSPRO will reach out within one business day. If it&rsquo;s urgent, call us directly at <a href="tel:+15613039475" style="color: var(--gold-2)">(561) 303-9475</a>.</p>
+      <div class="hero-actions reveal reveal-d3">
+        <a href="index.html" class="btn btn-gold">Back to Home</a>
+        <a href="https://www.instagram.com/mundspro" target="_blank" rel="noopener" class="btn btn-outline-light">Follow on Instagram</a>
       </div>
     </div>
   </section>
 </main>
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <a href="/" class="logo">MUND<span>SPRO</span></a>
-    <p>&copy; 2026 MUNDSPRO. All rights reserved.</p>
+
+<footer class="site-footer" style="padding: 32px 0;">
+  <div class="container footer-bottom" style="margin-top: 0; padding-top: 0; border-top: 0;">
+    <span>&copy; <span id="year"></span> MUNDSPRO. All rights reserved.</span>
+    <span>Boca Raton, FL</span>
   </div>
 </footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
