@@ -9,9 +9,10 @@
   --text-soft: #5c6270;
   --text-on-dark: #e9e6df;
   --text-on-dark-soft: #a9aeb8;
-  --gold: #b8955a;
-  --gold-2: #cfae6e;
-  --gold-dark: #9a7a45;
+  --gold: #d1a04a;
+  --gold-2: #e2b866;
+  --gold-dark: #9c7a3a;
+  --steel: #cfcfd2;
   --line: rgba(14, 17, 22, 0.1);
   --line-dark: rgba(255, 255, 255, 0.1);
   --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
@@ -57,9 +58,10 @@ em.accent { font-style: italic; color: var(--gold); }
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-dark);
   margin-bottom: 18px;
 }
+.hero .eyebrow, .section-dark .eyebrow, .signature .eyebrow, .cta-band .eyebrow { color: var(--gold-2); }
 .rule { width: 72px; height: 2px; background: var(--gold); margin: 22px 0 26px; }
 .lede { font-size: 1.1rem; color: var(--text-soft); max-width: 60ch; }
 .center { text-align: center; }
@@ -156,9 +158,15 @@ em.accent { font-style: italic; color: var(--gold); }
 .site-header.on-light { color: var(--ink); }
 .site-header.on-light.scrolled { background: rgba(247, 244, 238, 0.9); box-shadow: 0 1px 0 var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 1.55rem; font-weight: 600; letter-spacing: 0.02em; line-height: 1; }
-.logo .dot { color: var(--gold); }
-.logo svg { width: 34px; height: 34px; flex: none; }
+.logo { display: inline-flex; align-items: center; gap: 12px; line-height: 1; }
+.logo-badge { width: 46px; height: 46px; flex: none; display: block; }
+.wordmark { display: inline-flex; font-family: 'Montserrat', var(--font-body); font-weight: 800; font-size: 1.3rem; letter-spacing: 0.06em; line-height: 1; }
+.wm-gold, .wm-steel { -webkit-background-clip: text; background-clip: text; color: transparent; }
+.wm-gold { background-image: linear-gradient(180deg, #f3d283 0%, #d8a855 48%, #a97d30 100%); }
+.wm-steel { background-image: linear-gradient(180deg, #f4f4f6 0%, #cfcfd2 48%, #8e9096 100%); }
+.footer-brand .logo-badge { width: 64px; height: 64px; }
+.footer-brand .wordmark { font-size: 1.6rem; }
+.footer-tagline { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-2); margin: -4px 0 18px; }
 .nav { display: flex; align-items: center; gap: 34px; }
 .nav a { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.85; white-space: nowrap; transition: opacity 0.2s; }
 @media (max-width: 1200px) { .nav { gap: 22px; } .nav a { letter-spacing: 0.14em; } }

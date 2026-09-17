@@ -1,3 +1,9 @@
+Logo files (already in place, generated from the official logo)
+  logo-full.png         original logo artwork (dark background) - use for social profiles / print
+  logo-badge.png        circular MP badge with transparent background - header, footer, icons
+  favicon-32.png, favicon-192.png, apple-touch-icon.png, icon-512.png  browser/app icons
+  og-image.png          1200x630 social share card (Facebook/LinkedIn/iMessage previews)
+
 Drop project photos here using these exact filenames and they appear on the site automatically.
 Until a file exists, the site shows a dark gradient placeholder in its place.
 
