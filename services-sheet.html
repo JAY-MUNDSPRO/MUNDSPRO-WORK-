@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUNDSPRO — Services</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e1116; --paper: #ffffff; --soft: #f7f4ee;
+    --text: #1a1d22; --muted: #5c6270;
+    --gold: #d1a04a; --gold-dark: #9c7a3a;
+    --line: rgba(14,17,22,0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    color: var(--text); background: #e9e6df;
+    line-height: 1.55; -webkit-font-smoothing: antialiased;
+    padding: 32px 16px;
+  }
+  .sheet {
+    width: 8.5in; max-width: 100%; margin: 0 auto; background: var(--paper);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  }
+
+  /* Header */
+  .head { background: var(--ink); color: #fff; padding: 34px 44px 30px; }
+  .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .brand img { width: 58px; height: 58px; }
+  .wordmark { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.85rem; letter-spacing: 0.06em; line-height: 1; }
+  .wm-gold { background-image: linear-gradient(180deg,#f3d283,#d8a855 48%,#a97d30); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .wm-steel { background-image: linear-gradient(180deg,#f4f4f6,#cfcfd2 48%,#8e9096); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .tagline { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-top: 6px; }
+  .head h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2.1rem; line-height: 1.12; margin-bottom: 8px; }
+  .head h1 em { font-style: italic; color: var(--gold); }
+  .head p { color: #b9bcc3; font-size: 0.93rem; max-width: 52ch; }
+  .headline-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .contact-quick { text-align: right; font-size: 0.88rem; color: #d8d5cf; line-height: 1.7; white-space: nowrap; }
+  .contact-quick strong { color: var(--gold); display: block; font-size: 1.05rem; letter-spacing: 0.02em; }
+
+  /* Body */
+  .body { padding: 34px 44px 30px; }
+  .eyebrow { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 14px; }
+  h2 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.5rem; margin-bottom: 4px; }
+
+  .services { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 34px; margin-bottom: 30px; }
+  .svc { border-top: 2px solid var(--gold); padding-top: 12px; }
+  .svc h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.16rem; font-weight: 600; margin-bottom: 4px; }
+  .svc p { font-size: 0.855rem; color: var(--muted); }
+
+  .band { background: var(--soft); border-left: 3px solid var(--gold); padding: 20px 24px; margin-bottom: 28px; }
+  .band h2 { margin-bottom: 10px; }
+  .how { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .how .n { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold-dark); line-height: 1; margin-bottom: 4px; }
+  .how h4 { font-size: 0.83rem; font-weight: 700; margin-bottom: 2px; }
+  .how p { font-size: 0.79rem; color: var(--muted); line-height: 1.45; }
+
+  .trust { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 30px; margin-bottom: 26px; }
+  .trust li { list-style: none; position: relative; padding-left: 22px; font-size: 0.875rem; }
+  .trust li::before {
+    content: ''; position: absolute; left: 0; top: 7px; width: 9px; height: 5px;
+    border-left: 2px solid var(--gold); border-bottom: 2px solid var(--gold);
+    transform: rotate(-45deg);
+  }
+  .trust li strong { font-weight: 700; }
+
+  .area { font-size: 0.85rem; color: var(--muted); padding-top: 18px; border-top: 1px solid var(--line); }
+  .area strong { color: var(--text); }
+
+  /* CTA footer */
+  .cta { background: var(--ink); color: #fff; padding: 24px 44px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .cta .l { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; }
+  .cta .l span { color: var(--gold); font-style: italic; }
+  .cta .r { text-align: right; font-size: 0.9rem; color: #c8cbd1; line-height: 1.6; }
+  .cta .r b { color: #fff; font-size: 1.15rem; display: block; letter-spacing: 0.03em; }
+  .lic { background: #f0ece4; padding: 9px 44px; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.03em; }
+
+  @media print {
+    @page { size: letter; margin: 0; }
+    body { background: #fff; padding: 0; }
+    .sheet { box-shadow: none; width: 100%; }
+    .head, .cta { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .band, .lic, .svc { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (max-width: 720px) {
+    body { padding: 0; }
+    .head, .body, .cta, .lic { padding-left: 22px; padding-right: 22px; }
+    .services, .trust { grid-template-columns: 1fr; }
+    .how { grid-template-columns: 1fr 1fr; }
+    .headline-row, .cta { flex-direction: column; align-items: flex-start; }
+    .contact-quick, .cta .r { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="head">
+    <div class="brand">
+      <img src="assets/logo-badge.png" alt="">
+      <div>
+        <div class="wordmark"><span class="wm-gold">MUNDS</span><span class="wm-steel">PRO</span></div>
+        <div class="tagline">Reno. Build. Design.</div>
+      </div>
+    </div>
+    <div class="headline-row">
+      <div>
+        <h1>Interior remodeling,<br><em>designed and built by one team.</em></h1>
+        <p>From a single accent wall to a full down-to-the-studs rebuild — Boca Raton and Palm Beach County.</p>
+      </div>
+      <div class="contact-quick">
+        <strong>(561) 303-9475</strong>
+        mundspro@gmail.com<br>
+        mundspro.com
+      </div>
+    </div>
+  </header>
+
+  <main class="body">
+
+    <p class="eyebrow">What We Do</p>
+    <div class="services">
+      <div class="svc">
+        <h3>Full Interior Remodels</h3>
+        <p>Kitchens, bathrooms and living spaces — reworked around how the space is actually used.</p>
+      </div>
+      <div class="svc">
+        <h3>Down-to-the-Studs Rebuilds</h3>
+        <p>Complete gut renovations. Stripped back to structure and rebuilt to spec.</p>
+      </div>
+      <div class="svc">
+        <h3>Custom Accent &amp; Feature Walls</h3>
+        <p>Slat wood, board &amp; batten, textured plaster, stone panel, millwork, backlit LED. Our specialty.</p>
+      </div>
+      <div class="svc">
+        <h3>Custom Built-Ins &amp; Millwork</h3>
+        <p>Media walls, shelving, closets and one-off pieces built to fit the room exactly.</p>
+      </div>
+      <div class="svc">
+        <h3>Interior Design Concepts</h3>
+        <p>Layout, materials and finish direction worked out before the build starts.</p>
+      </div>
+      <div class="svc">
+        <h3>Repairs &amp; Smaller Projects</h3>
+        <p>Doors, drywall, trim, flooring and paint-ready repairs. No job treated as too small.</p>
+      </div>
+    </div>
+
+    <div class="band">
+      <p class="eyebrow">How We Work</p>
+      <h2>No surprises, start to finish</h2>
+      <div class="how" style="margin-top:14px">
+        <div><div class="n">01</div><h4>Walkthrough</h4><p>We look at the space and talk through what's realistic.</p></div>
+        <div><div class="n">02</div><h4>Written Scope</h4><p>Scope and price in writing before anything begins.</p></div>
+        <div><div class="n">03</div><h4>Build</h4><p>Same team that planned it does the work. Clean site.</p></div>
+        <div><div class="n">04</div><h4>Walkthrough</h4><p>Punch list handled before we call it done.</p></div>
+      </div>
+    </div>
+
+    <p class="eyebrow">Why Clients Stay With Us</p>
+    <ul class="trust">
+      <li><strong>Design and build in-house.</strong> No gap between who planned it and who builds it.</li>
+      <li><strong>Written scope before work starts.</strong> You know the price before we begin.</li>
+      <li><strong>Licensed and insured.</strong> [FILL IN: license # · carrier] — COI on request.</li>
+      <li><strong>Local to Boca Raton.</strong> Not a call center or a franchise.</li>
+      <li><strong>One point of contact.</strong> You deal with Jay, not a rotating crew lead.</li>
+      <li><strong>Any scale of work.</strong> One wall or the whole house, same standard.</li>
+    </ul>
+
+    <p class="area"><strong>Service area:</strong> Boca Raton · Delray Beach · Boynton Beach · Deerfield Beach · Highland Beach · Parkland · Palm Beach County</p>
+
+  </main>
+
+  <footer class="cta">
+    <div class="l">Free walkthrough and written estimate — <span>within 48 hours.</span></div>
+    <div class="r">
+      <b>(561) 303-9475</b>
+      mundspro@gmail.com · mundspro.com
+    </div>
+  </footer>
+  <div class="lic">MUNDSPRO CONCEPT LLC · Boca Raton, FL · [FILL IN: postal address] · [FILL IN: license number]</div>
+
+</div>
+</body>
+</html>
