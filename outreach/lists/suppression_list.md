@@ -2,22 +2,24 @@
 
 Built 2026-09-18 by consolidating `campaign_learnings.md`, `prospects_pre2020.md`, `prospects_2020_2021.md`, `prospects_2022_2023.md` and `prospects_2024_present.md`. Load this into the mail tool **before** any send. Nothing here may be emailed again, including in a "one last" campaign.
 
-**Total unique addresses suppressed: 223**
+**Total unique addresses suppressed: 241**
 
 | Reason category | Addresses |
 |---|---|
-| Hard opt-out / hostile reply | 8 |
+| Hard opt-out / hostile reply | 10 |
 | Dispute / legal / complaint | 10 |
 | Personal / family / legal | 13 |
 | Compromised / unsafe address | 1 |
 | Do-not-market — active relationship | 1 |
 | Soft exclusion — declined / friction | 5 |
-| Hard bounce / undeliverable | 140 |
+| Hard bounce / undeliverable | 156 |
 | Junk / placeholder / typo / owner-own | 14 |
 | Duplicate address | 2 |
 | Vendor / supplier / platform | 27 |
 | Excluded by research | 2 |
-| **Total** | **223** |
+| **Total** | **241** |
+
+*(This total now folds in the 2026-09-18 and 2026-09-20 "Added" batches below, plus today's — those 18 addresses were logged in their own dated tables further down but had not previously been rolled into this count or the plain list. Now current as of 2026-09-21.)*
 
 Also suppress, although no full address is recorded in the research: **any `*@googlegroups.com` address** (campaign_learnings.md §4 names a `delraybeach@…googlegroups` and a `southfl…@googlegroups` recipient that reject outside posts, without spelling either address out).
 
@@ -475,6 +477,24 @@ zachary.telford@gethearth.com
 Zara.Bailey@angi.com
 info@tricountyallrestorations.com
 RonitaLee@paradiseexteriorsllc.net
+jordan@letrenova.com
+sarah@homeangelsfl.com
+jennifer@primerealestatefl.com
+bmeyers@vestapropertyservices.com
+Colleen.Winton@redcross.org
+lindamirik@gmail.com
+jeanluc_caron@videotron.ca
+glaze62@comcast.net
+bocaraton@watermoldandfire.com
+contact@getpaidforyourclaim.com
+info@bocaratonwatercleanup.com
+info@vinyasun.com
+info@jbarontechnologies.com
+info@bigorangesolar.com
+Contact@thesenagroup.com
+info@sanctuarywindows.com
+claims@dolphinclaims.com
+info@smoothmoversinc.com
 ```
 
 ### Notes
@@ -530,3 +550,15 @@ mrsdianeevans@outlook.com
 | bocaraton@watermoldandfire.com | HARD BOUNCE — address not found |
 | contact@getpaidforyourclaim.com | HARD BOUNCE — address not found |
 | info@bocaratonwatercleanup.com | HARD BOUNCE — address not found |
+
+## Added 2026-09-21 (wave-2 new-verticals send + opt-out)
+
+| Address | Reason | Detail |
+|---|---|---|
+| info@vinyasun.com | HARD BOUNCE | address not found (Solar) |
+| info@jbarontechnologies.com | HARD BOUNCE | address not found (HomeSecurity) |
+| info@bigorangesolar.com | HARD BOUNCE | that "info@" is a Google Group, rejects outside posters — will never accept mail from this account (Solar) |
+| Contact@thesenagroup.com | BLOCKED | Microsoft 365 rejected: `550 5.4.1 Recipient address rejected: Access denied` — recipient-side mailbox restriction, not a spam/reputation block (Insurance) |
+| info@sanctuarywindows.com | HARD BOUNCE | Google Group, rejects outside posters (delayed bounce from an earlier trades-batch send) |
+| claims@dolphinclaims.com | BLOCKED | recipient server rejected message (delayed bounce from an earlier restoration-batch send) |
+| info@smoothmoversinc.com | OPT-OUT | replied "no thanks" 2026-09-21 to the Moving-vertical email — honor permanently |
