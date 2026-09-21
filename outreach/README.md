@@ -7,32 +7,31 @@ survive between sessions and are easy to find later.
 
 **Sent so far:** 41 (initial client/vendor campaign) + 65 (verified dormant
 leads) + 48 (wave-1 vendor batch: restoration/design/PM/trades/realtors) +
-67 (wave-2 "ready now" batch, same categories, new companies) = **221 emails
-sent**, low single-digit bounce rate throughout.
+67 (wave-2 "ready now" batch, same categories, new companies) + 151
+(wave-2 "new verticals" batch: title, insurance, mortgage, photographers,
+appraisers, movers, closets, window treatments, garage doors, epoxy
+floors, home security, junk removal, senior living, senior move
+managers, pest control, solar) = **372 emails sent**, **zero bounces** on
+the 151-email new-verticals batch (checked after every 1-2 verticals
+during send), low single-digit bounce rate on earlier batches.
 
-**Pending — needs your approval before sending:**
-`lists/WAVE2_PENDING_new_drafts.csv` — **151 verified recipients** across 16
-new vendor categories that don't have approved copy yet:
-title companies, insurance agents, mortgage brokers, real estate
-photographers, appraisers, movers, closet companies, window treatment
-companies, garage door companies, epoxy floor companies, home security
-installers, junk removal companies, senior living facilities, senior move
-managers, pest control companies, solar installers.
-
-Drafts for these are written and waiting for review:
-`drafts/wave2_new_verticals_PENDING_APPROVAL.md`
+**Nothing currently pending approval.** All drafted/approved copy has
+been sent as of 2026-09-21.
 
 ## Files
 
 - `drafts/wave1_specialty_intros_SENT.md` — the 6 original approved
   templates (restoration, design/showroom, property mgmt, realtors, trades,
   homeowners). Design/showroom was intentionally excluded from sending.
-- `drafts/wave2_new_verticals_PENDING_APPROVAL.md` — 16 new draft templates,
-  **not yet approved or sent**.
-- `lists/WAVE2_PENDING_new_drafts.csv` — the 151 verified email addresses
-  matched to those 16 pending drafts. Every address was pulled from a real,
-  live web page — none guessed — and cross-checked against the full Gmail
-  Sent history before being marked clear.
+- `drafts/wave2_new_verticals_SENT.md` — 16 draft templates (title,
+  insurance, mortgage, photographers, appraisers, movers, closets, window
+  treatments, garage doors, epoxy floors, home security, junk removal,
+  senior living, senior move managers, pest control, solar), approved and
+  **sent 2026-09-21** to all 151 recipients, zero bounces.
+- `lists/wave2_new_verticals_SENT_recipients.csv` — the 151 verified email
+  addresses matched to those 16 drafts, all sent 2026-09-21. Every address
+  was pulled from a real, live web page — none guessed — and cross-checked
+  against the full Gmail Sent history before sending.
 - `lists/pbc_vendor_roster_wave1.csv` — the original 212-company Palm Beach
   County roster (company names, cities, phone numbers, contact-page URLs)
   that started this whole effort. Useful if you want to go collect more
@@ -42,16 +41,17 @@ Drafts for these are written and waiting for review:
   any future send, and add to it whenever a new bounce or opt-out comes in.
 - **`lists/MASTER_SENT_RECIPIENTS.csv`** — **the single source of truth for
   dedupe.** Every email address ever sent from mundspro@gmail.com, from the
-  very start of the account through 2026-09-21 — **1,950 distinct
+  very start of the account through 2026-09-21 — **2,101 distinct
   addresses**, each with first-sent date, last-sent date, how many times,
   and which source it came from (`historical` = built from a full Sent-
   folder rebuild covering 2016–2026-09-18; `campaign-2026-09` = this week's
-  outreach push). **Before any future send, check every candidate address
-  against this file first.** If it's not here, it's genuinely never been
-  contacted (as of this file's date).
+  outreach push; `campaign-2026-09-wave2` = the 151-recipient new-verticals
+  batch sent 2026-09-21). **Before any future send, check every candidate
+  address against this file first.** If it's not here, it's genuinely never
+  been contacted (as of this file's date).
 - `lists/CAMPAIGN_LOG_2026-09.csv` — a plain chronological record of this
   week's actual campaign: date, subject line, recipient, one row per
-  message sent. 222 messages across 6 campaigns:
+  message sent. 373 messages across 7 campaigns:
   | Count | Subject |
   |---|---|
   | 87 | Checking in — MUNDSPRO (clients + dormant leads) |
@@ -60,6 +60,7 @@ Drafts for these are written and waiting for review:
   | 25 | Interior contractor for your properties — MundsPro (property mgmt) |
   | 20 | Remodeling support for your clients — MundsPro (original vendor batch) |
   | 12 | Pre-listing work in 48 hours — MundsPro (realtors) |
+  | 151 | 16 new-vertical subjects (title, insurance, mortgage, photographers, appraisers, movers, closets, window treatments, garage doors, epoxy floors, home security, junk removal, senior living, senior move managers, pest control, solar) — MundsPro |
 
   Useful for reporting, for spotting who to follow up with, or for auditing
   exactly what any given person was sent and when.
@@ -73,17 +74,19 @@ re-verify with a fresh Gmail Sent search before trusting a copy of this
 file that's more than a day or two old — don't skip that check, it's what
 caught 26 accidental repeat-contacts earlier in this campaign.
 
-## To send the pending 151
+## Starting a new batch
 
-1. Open `drafts/wave2_new_verticals_PENDING_APPROVAL.md`, review/edit.
-2. Say so in a new session on this repo/branch — reference this file by
-   path and ask to send. A fresh session can pick this up with no
-   re-explaining needed.
-3. Standing rule: **never send without explicit approval**, and always
-   re-verify against `lists/suppression_list.md` plus a fresh Gmail Sent
-   check immediately before sending — do not trust this file's dedupe if
-   more than a day or two has passed, since more emails may have gone out
-   since it was built.
+There's no pending batch right now. To start a new one: research/draft new
+vendor categories or add new companies to an existing category, save the
+draft + recipient list to `drafts/` and `lists/` following the naming
+pattern used here, then say so in a new session on this repo/branch,
+referencing the file by path and asking to send. A fresh session can pick
+this up with no re-explaining needed. Standing rule: **never send without
+explicit approval**, and always re-verify against
+`lists/suppression_list.md` plus a fresh Gmail Sent check immediately
+before sending — do not trust `MASTER_SENT_RECIPIENTS.csv`'s dedupe if
+more than a day or two has passed, since more emails may have gone out
+since it was last updated.
 
 ## Rules this campaign has followed throughout
 
